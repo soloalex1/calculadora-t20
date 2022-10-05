@@ -6,3 +6,5 @@ export const ATRIBUTOS = [
   { nome: "Sabedoria", sigla: "SAB" },
   { nome: "Carisma", sigla: "CAR" },
 ];
+
+export const HEADERS = ["Valor", "Raça", "Bônus", "Total", "Custo"];

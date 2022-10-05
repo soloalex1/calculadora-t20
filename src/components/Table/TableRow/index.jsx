@@ -1,27 +1,10 @@
-import Input from "components/Input";
+import TextBlock from "components/TextBlock";
 
-const TableRow = ({ nome, sigla }) => {
+const TableRow = ({ nome, sigla, children }) => {
   return (
     <tr>
-      <td>
-        <h6>{sigla}</h6>
-        <span>{nome}</span>
-      </td>
-      <td>
-        <Input />
-      </td>
-      <td>
-        <Input />
-      </td>
-      <td>
-        <Input />
-      </td>
-      <td>
-        <Input />
-      </td>
-      <td>
-        <Input />
-      </td>
+      <TextBlock nome={nome} sigla={sigla} />
+      {children}
     </tr>
   );
 };
