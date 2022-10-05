@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const SingleBlock = styled.th`
   color: #5b5b5b;
   border: 1px solid red;
-  min-width: 30px;
+  width: 70px;
   padding: 8px;
-  height: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter", sans-serif;
 
   h3 {
