@@ -6,18 +6,18 @@ import { HEADERS } from "constants";
 
 const TableHeader = () => {
   return (
-    <thead>
+    <S.HeaderContainer>
       <tr>
         <S.GhostCell>
           <TextBlock />
         </S.GhostCell>
         {HEADERS.map((header, index) => (
-          <S.HeaderCell key={index}>
+          <th key={index}>
             <TextBlock sigla={header} />
-          </S.HeaderCell>
+          </th>
         ))}
       </tr>
-    </thead>
+    </S.HeaderContainer>
   );
 };
 

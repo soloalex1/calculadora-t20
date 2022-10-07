@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
 export const SingleBlock = styled.td`
-  color: #5b5b5b;
+  color: #f0dc82;
+  background-color: #b02b2e;
   width: 80px;
-  padding: 12px;
-  margin: 4px;
+  padding: 4px;
   min-height: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
   font-family: "Inter", sans-serif;
+
+  * {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 
   h3 {
     font-size: 18px;
-    margin: 4px 0;
+    width: 100%;
+    text-align: center;
     font-weight: 700;
   }
 

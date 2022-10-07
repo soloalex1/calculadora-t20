@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const HeaderCell = styled.th`
-  td {
+export const HeaderContainer = styled.thead`
+  th:last-of-type td {
     background-color: #3f0f12;
-    color: #fff;
   }
 `;
 

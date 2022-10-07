@@ -1,10 +1,29 @@
+import Input from "components/Input";
 import TextBlock from "components/TextBlock";
 
-const TableRow = ({ nome, sigla, children }) => {
+import * as S from "./styles";
+
+const TableRow = ({ nome, sigla }) => {
   return (
     <tr>
-      <TextBlock nome={nome} sigla={sigla} />
-      {children}
+      <S.RowCell>
+        <TextBlock nome={nome} sigla={sigla} />
+      </S.RowCell>
+      <S.RowCell>
+        <Input />
+      </S.RowCell>
+      <S.RowCell>
+        <Input />
+      </S.RowCell>
+      <S.RowCell>
+        <Input />
+      </S.RowCell>
+      <S.RowCell>
+        <Input />
+      </S.RowCell>
+      <S.RowCell>
+        <Input />
+      </S.RowCell>
     </tr>
   );
 };
