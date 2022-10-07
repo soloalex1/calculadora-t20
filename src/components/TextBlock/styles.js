@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
-export const SingleBlock = styled.th`
-  color: #5b5b5b;
-  border: 1px solid red;
-  width: 70px;
-  padding: 8px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const SingleBlock = styled.td`
+  color: #f0dc82;
+  background-color: #b02b2e;
+  width: 80px;
+  padding: 4px;
+  min-height: 50px;
+  height: 100%;
   font-family: "Inter", sans-serif;
 
+  * {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
   h3 {
-    font-size: 16px;
-    margin: 4px 0;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
   }
 
   span {
     font-size: 12px;
+    font-weight: 400;
   }
 `;

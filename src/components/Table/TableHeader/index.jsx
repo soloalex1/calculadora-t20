@@ -1,14 +1,23 @@
 import TextBlock from "components/TextBlock";
 
+import * as S from "./styles";
+
+import { HEADERS } from "constants";
+
 const TableHeader = () => {
   return (
-    <>
-      <TextBlock nome="Valor" />
-      <TextBlock nome="Raça" />
-      <TextBlock nome="Bônus" />
-      <TextBlock nome="Total" />
-      <TextBlock nome="Custo" />
-    </>
+    <S.HeaderContainer>
+      <tr>
+        <S.GhostCell>
+          <TextBlock />
+        </S.GhostCell>
+        {HEADERS.map((header, index) => (
+          <th key={index}>
+            <TextBlock sigla={header} />
+          </th>
+        ))}
+      </tr>
+    </S.HeaderContainer>
   );
 };
 

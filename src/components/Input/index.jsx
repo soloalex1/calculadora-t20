@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import * as S from "./styles";
 
-const Input = () => {
+const Input = ({ ...attr }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
@@ -10,7 +10,14 @@ const Input = () => {
     setValue(event.target.value);
   };
 
-  return <S.StyledInput type="text" value={value} onChange={handleChange} />;
+  return (
+    <S.StyledInput
+      type="text"
+      value={value}
+      onChange={handleChange}
+      {...attr}
+    />
+  );
 };
 
 export default Input;
