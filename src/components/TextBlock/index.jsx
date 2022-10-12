@@ -1,10 +1,10 @@
 import * as S from "./styles";
 
-const TextBlock = ({ nome, sigla }) => {
+const TextBlock = ({ name, abbr }) => {
   return (
     <S.SingleBlock>
-      <h3>{sigla}</h3>
-      {nome && <span>{nome}</span>}
+      <h3>{abbr}</h3>
+      {name && <span>{name}</span>}
     </S.SingleBlock>
   );
 };

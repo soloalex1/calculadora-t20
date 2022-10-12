@@ -1,15 +1,18 @@
+import { useStore } from "store";
+
 import * as S from "./styles";
 
-import { ATRIBUTOS } from "constants";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 
 const Table = () => {
+  const attributes = useStore((state) => state.attributes);
+
   return (
     <S.TableContainer>
       <TableHeader />
       <tbody>
-        {ATRIBUTOS.map((atributo, index) => (
+        {attributes.map((atributo, index) => (
           <TableRow key={index} {...atributo} />
         ))}
       </tbody>

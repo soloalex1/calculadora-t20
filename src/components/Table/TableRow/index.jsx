@@ -3,26 +3,26 @@ import TextBlock from "components/TextBlock";
 
 import * as S from "./styles";
 
-const TableRow = ({ nome, sigla }) => {
+const TableRow = ({ name, abbr, value, race, bonus, total, cost }) => {
   return (
     <tr>
       <S.RowCell>
-        <TextBlock nome={nome} sigla={sigla} />
+        <TextBlock name={name} abbr={abbr} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={value} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={race} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={bonus} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={total} readOnly />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={cost} readOnly />
       </S.RowCell>
     </tr>
   );
