@@ -6,14 +6,18 @@ import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 
 const Table = () => {
-  const attributes = useStore((state) => state.attributes);
+  const { attributes, handleAttributeChange } = useStore((state) => state);
 
   return (
     <S.TableContainer>
       <TableHeader />
       <tbody>
-        {attributes.map((atributo, index) => (
-          <TableRow key={index} {...atributo} />
+        {attributes.map((attribute, index) => (
+          <TableRow
+            key={index}
+            attribute={attribute}
+            handleChange={handleAttributeChange}
+          />
         ))}
       </tbody>
     </S.TableContainer>
