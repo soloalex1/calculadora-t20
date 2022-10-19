@@ -1,0 +1,63 @@
+import create from "zustand";
+
+export const useStore = create((set) => ({
+  points: 10,
+  currentAttribute: {},
+  attributes: [
+    {
+      name: "Força",
+      abbr: "FOR",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+    {
+      name: "Destreza",
+      abbr: "DES",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+    {
+      name: "Constituição",
+      abbr: "CON",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+    {
+      name: "Inteligência",
+      abbr: "INT",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+    {
+      name: "Sabedoria",
+      abbr: "SAB",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+    {
+      name: "Carisma",
+      abbr: "Car",
+      value: "",
+      race: "",
+      bonus: "",
+      total: "",
+      cost: "",
+    },
+  ],
+  updateAttributes: () => ({}),
+}));

@@ -3,26 +3,32 @@ import TextBlock from "components/TextBlock";
 
 import * as S from "./styles";
 
-const TableRow = ({ nome, sigla }) => {
+const TableRow = ({ attribute, handleChange }) => {
+  const { name, abbr, value, race, bonus, cost, total } = attribute;
+
+  const onValueChange = (value) => {
+    handleChange(name, value);
+  };
+
   return (
     <tr>
       <S.RowCell>
-        <TextBlock nome={nome} sigla={sigla} />
+        <TextBlock name={name} abbr={abbr} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={value} onChange={onValueChange} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={race} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={bonus} />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={total} readOnly />
       </S.RowCell>
       <S.RowCell>
-        <Input />
+        <Input value={cost} readOnly />
       </S.RowCell>
     </tr>
   );

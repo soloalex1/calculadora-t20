@@ -1,13 +1,8 @@
-import { useState } from "react";
-
 import * as S from "./styles";
 
-const Input = ({ ...attr }) => {
-  const [value, setValue] = useState("");
-
+const Input = ({ value, onChange, ...attr }) => {
   const handleChange = (event) => {
-    console.log(event.target.value);
-    setValue(event.target.value);
+    console.log("change", event.target.value);
   };
 
   return (
