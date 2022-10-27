@@ -13,7 +13,7 @@ const TableHeader = () => {
         </S.GhostCell>
         {HEADERS.map((header, index) => (
           <th key={index}>
-            <TextBlock sigla={header} />
+            <TextBlock abbr={header} />
           </th>
         ))}
       </tr>
